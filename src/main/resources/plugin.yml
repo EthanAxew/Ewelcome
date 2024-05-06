@@ -1,0 +1,11 @@
+name: Ewelcome
+version: '${project.version}'
+main: com.ethanaxe.Ewelcome
+api-version: '1.20'
+commands:
+  ewelcome:
+    description: "欢迎使用该插件"
+    permission: ewelcome.main
+    aliases: ewe
+# This sets PlaceholderAPI as an optional dependency for your plugin.
+softdepend: [PlaceholderAPI]
