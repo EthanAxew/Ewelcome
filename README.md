@@ -17,6 +17,7 @@
 🐧作者qq:3785672683 作者qq群:787939667
 
 作者个人博客:www.ethanaxe.online 博客内有关于插件配置调整教程！
+
 (更新国内下载链接)[https://wwp.lanzouq.com/b00651ehvg]
 
 2024.5.7更新
