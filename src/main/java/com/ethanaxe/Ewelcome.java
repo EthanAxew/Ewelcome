@@ -1,21 +1,30 @@
 package com.ethanaxe;
-import me.clip.placeholderapi.expansion.PlaceholderExpansion;
+
+import com.ethanaxe.Listener.ChatListener;
+import com.ethanaxe.Listener.DeathListener;
+import com.ethanaxe.Listener.JoinandQuitListener;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
 public final class Ewelcome extends JavaPlugin implements org.bukkit.event.@NotNull Listener {
+    public static Ewelcome m;
 
 
-    static Ewelcome m;
+
     @Override
     public void onEnable() {
         // Plugin startup logic
         System.out.println("\033[33;1m欢迎使用\033[36;1;4mEthanAxe\033[0m\033[33;1m的\033[36;1;4mEwelcome\033[0m\033[33;1m插件！\033[0m");
+        //注册命令
         Bukkit.getPluginCommand("ewelcome").setExecutor(new commands());
-        Bukkit.getPluginManager().registerEvents(new Listener(),this);
         Bukkit.getPluginCommand("ewelcome").setTabCompleter(new commands());
+        //注册监听器
+        Bukkit.getPluginManager().registerEvents(new DeathListener(), this);
+        Bukkit.getPluginManager().registerEvents(new JoinandQuitListener(), this);
+        Bukkit.getPluginManager().registerEvents(new ChatListener(),this);
+
 
 
         saveDefaultConfig();
